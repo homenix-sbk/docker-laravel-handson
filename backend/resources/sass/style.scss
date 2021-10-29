@@ -1,0 +1,324 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+
+body {
+	font-family: メイリオ, sans-serif;
+	color: #634848;
+/*
+	background-image: url("../images/bg.jpg"); 
+	background-repeat: repeat;
+*/
+}
+header {
+	background-color: #ffebeb;
+	padding: 1.5em 0 0.5em;
+	text-align: center;
+	position: relative;
+}
+header::before,
+header::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 6px;
+  box-sizing: border-box;
+}
+header::before {
+  top: 0;
+  border-top: 2px solid #634848;
+  border-bottom: 1px solid #634848;
+}
+header::after {
+  bottom: 0;
+  border-top: 1px solid #634848;
+  border-bottom: 2px solid #634848;
+}
+.container {
+	padding: 30px 20px;
+/*
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background-color: #fff;
+*/
+}
+h1 {
+	font-family: 'Great Vibes', serif;
+	font-size: 40px;
+}
+h2, h3 {
+	position: relative;
+	text-align: center;
+	font-family: 'Great Vibes', 'Noto Serif JP', serif;
+	margin: 30px 0 30px 0;
+}
+h2 span, h3 span {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	margin: 0 2.5em;
+	padding: 0 1em;
+/*
+	background-image: url("../images/bg.jpg");
+	background-repeat: repeat;
+*/
+	background-color: #fff;
+	text-align: left;
+}
+h2::before, h3::before {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+	background: -webkit-linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
+	background: linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
+}
+h2 span {
+	font-size: 36px;
+}
+h3 span {
+	font-size: 24px;
+}
+#back {
+	font-family: 'Great Vibes', cursive;
+	font-size: 20px;
+	padding-bottom: 1px;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+}
+/*----------------------------------------
+index css
+----------------------------------------*/
+.topMenu {
+	margin: 0 auto;
+	width: fit-content;
+}
+table {
+	width: 100%;
+	margin-top: 10px;
+}
+tr {
+	border: solid 1px #634848;
+}
+th {
+	background-color: #634848;
+	color: #fff;
+	font-weight: normal;
+}
+tr:nth-child(odd) ,
+.row:nth-child(odd) {
+	background-color: #ffebeb;
+}
+tr:nth-child(even),
+.row:nth-child(even) {
+	background-color: #fff;
+}
+tr:hover {
+	background-color: #e1efd1;
+}
+table th, td {
+	padding: 5px 10px;
+	text-align: center;
+}
+/*------- 従業員リスト ----------*/
+.disp-box label {
+    display: inline-block;
+    cursor: pointer;
+}
+/** チェックボックス **/
+.disp-box input {
+    display: none; /* 非表示 */
+}
+/** 表示・非表示を切り替えるテキスト **/
+.disp-box .emploList {
+	clear: both;
+    overflow: hidden;
+}
+/** チェックボックスにチェックが入った時の、テキストの処理 **/
+.disp-box input:checked ~ .emploList {
+    height: auto;
+    opacity: 1; /* 文字を表示 */
+    transition: 0.5s;  /* 文字が表示・非表示される時のスピード */
+}
+
+@media only screen and (max-width: 768px) {
+}
+/*----------------------------------------
+form css
+----------------------------------------*/
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.form-content {
+	border: solid 1px #634848;
+	margin-top: 10px;
+}
+.row {
+	padding: 10px;
+	margin: 0;
+	border-bottom: solid 1px #634848;
+}
+.no-border {
+	border-bottom: none;
+}
+.btn-area {
+	text-align: center;
+	padding-top: 15px;
+}
+.form-content .col-md-3, .p-top-6 {
+	padding-top: 6px;
+}
+
+form input.form-control:focus,
+.form-control:focus {
+	border-color: #78d0de;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(23,162,184, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(23,162,184, .6);
+}
+/*----------------------------------------
+importCsv css
+----------------------------------------*/
+.importCsv p {
+	text-align: center;
+	margin-top: 100px;
+}
+/*------- button ----------*/
+p.btnArea {
+	margin-top: 30px;
+	text-align: center;
+}
+.btn-topMenu, .disp-box label {
+	display: block;
+	width: 200px;
+	height: 100px;
+	color: #634848;
+	text-decoration: none;
+	text-align:center;
+	border: none;
+	padding: 7px 15px;
+	font-size:18px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: #634848 1px solid;
+	float: left;
+	margin: 5px;
+}
+.disp-box label {
+	line-height: 84px;
+}
+.btn-pink {
+	color: #fff;
+	padding: 3px 12px;
+	font-size:16px;
+	letter-spacing: 0.05em;
+    border: 1px dashed rgba(255,255,255,0.5) !important;
+	border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	border: none;
+	display:inline-block;
+	position:relative;
+	background: #eca7a7;
+	box-shadow: 0 0 0 3px #e09898, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 3px #e09898, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 0 3px #e09898, 0 2px 3px 3px rgba(0,0,0,0.3);
+}
+.btn-glay {
+	color: #fff;
+	padding: 3px 12px;
+	font-size:16px;
+	letter-spacing: 0.05em;
+    border: 1px dashed rgba(255,255,255,0.5) !important;
+	border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	border: none;
+	display:inline-block;
+	position:relative;
+	background: #a99999;
+	box-shadow: 0 0 0 3px #9c8c8c, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 3px #9c8c8c, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 0 3px #9c8c8c, 0 2px 3px 3px rgba(0,0,0,0.3);
+}
+.btn-brown {
+	min-width: 120px;
+    color: #fff;
+    padding: 6px 15px;
+	letter-spacing: 0.05em;
+    border: 1px dashed rgba(255,255,255,0.5);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	display:inline-block;
+	position:relative;
+	background: #774f48;
+	box-shadow: 0 0 0 3px #806363, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 3px #806363, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 0 3px #806363, 0 2px 3px 3px rgba(0,0,0,0.3);
+}
+button:hover {
+	opacity: 0.7;
+}
+button:focus {
+    outline: none;
+}
+#submit:disabled {
+	background: #c0c0c0;
+	box-shadow: 0 0 0 3px #b8b8b8, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 3px #b8b8b8, 0 2px 3px 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 0 3px #b8b8b8, 0 2px 3px 3px rgba(0,0,0,0.3);
+}
+/*gotoTop-------------------------------*/
+#gotoTop {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 65px;
+	height: 65px;
+	text-align: center;
+	color: #fff;
+	background-color: #804040;
+	opacity: 0.8;
+	border-radius: 50%;
+}
+#gotoTop a{
+	position: relative;
+	display: block;
+	width: 65px;
+	height: 65px;
+	text-decoration: none;
+	color: #fff;
+}
+#gotoTop a::before {
+	font-family: 'FontAwesome';
+	content: '\f102';
+	font-size: 25px;
+	color: #fff;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: -34px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+}
+#gotoTop a::after {
+	content: 'PAGE TOP';
+	position: absolute;
+	font-size: 11px;
+	top: 30px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+}
