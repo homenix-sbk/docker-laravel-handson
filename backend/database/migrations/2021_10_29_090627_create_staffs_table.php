@@ -16,7 +16,7 @@ class CreateStaffsTable extends Migration
             $table->date('joinDay');
             $table->string('genderId', 3);
             $table->string('positionId', 3);
-            $table->string('departmentId', 3);
+            $table->string('depertmentId', 3);
             $table->integer('retire');
             $table->timestamps();
         });

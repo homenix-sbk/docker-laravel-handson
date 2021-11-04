@@ -21,7 +21,7 @@ class Staff extends Model
         'joinDay' => 'required|date|date_format:Y-m-d',
         'genderId' => 'required|min:0|max:3',
         'positionId' => 'required|min:0|max:3',
-        'depertmentId' => 'required|min:0|max:3',
+        'departmentId' => 'required|min:0|max:3',
         'retire' => 'integer|min:0|max:1',
     );
 

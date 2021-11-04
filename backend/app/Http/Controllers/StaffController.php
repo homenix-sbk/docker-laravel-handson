@@ -36,7 +36,7 @@ class StaffController extends Controller
             'joinDay' => $request->joinDay,
             'genderId' => $request->genderId,
             'positionId' => $request->positionId,
-            'depertmentId' => $request->depertmentId,
+            'departmentId' => $request->departmentId,
             'retire' => $request->retire,
         ];
         DB::table('staffs')->insert($param);
@@ -58,7 +58,7 @@ class StaffController extends Controller
             'joinDay' => $request->joinDay,
             'genderId' => $request->genderId,
             'positionId' => $request->positionId,
-            'depertmentId' => $request->depertmentId,
+            'departmentId' => $request->departmentId,
             'retire' => $request->retire,
         ];
         DB::table('staffs')

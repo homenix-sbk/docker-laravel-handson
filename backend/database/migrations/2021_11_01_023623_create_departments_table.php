@@ -9,8 +9,8 @@ class CreateDepartmentsTable extends Migration
     public function up()
     {
         Schema::create('departments', function (Blueprint $table) {
-            $table->string('depertmentId', 3);
-            $table->string('depertmentName', 10);
+            $table->string('departmentId', 3);
+            $table->string('departmentName', 10);
             $table->timestamps();
         });
     }
